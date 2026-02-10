@@ -20,7 +20,7 @@ const Dashboard = () => {
             <DashRow1 />
 
             {/* Row 2: Main Area Line Chart & Stacked Bar Chart */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="h-[400px] lg:h-[450px]">
                     <TotalSpentChart />
                 </div>
@@ -30,7 +30,7 @@ const Dashboard = () => {
             </div>
 
             {/* Row 3: Security, Tasks, and Traffic */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 <div className="h-[380px] lg:h-[400px]">
                     <SecurityCard />
                 </div>
@@ -43,7 +43,7 @@ const Dashboard = () => {
             </div>
 
             {/* Row 4: Pie Chart & Trending NFTs */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-5">
                 <div className="h-full min-h-[400px] md:col-span-1">
                     <YourPieChart />
                 </div>
@@ -53,7 +53,7 @@ const Dashboard = () => {
             </div>
 
             {/* Row 5: History, Calendar, and Lesson Card */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 <div className="min-h-[450px]">
                     <HistoryList />
                 </div>
@@ -66,7 +66,7 @@ const Dashboard = () => {
             </div>
 
             {/* Row 6: Team Members & Complex Table */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 pb-10">
+            <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-5 pb-10">
                 <div className="md:col-span-1 h-full">
                     <TeamMembers />
                 </div>

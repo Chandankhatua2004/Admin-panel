@@ -25,7 +25,7 @@ const HorizonStatCard = ({ title, value, icon: Icon, extra, isBalance, flag: ini
     }, []);
 
     return (
-        <div className="horizon-card flex items-center justify-between p-6 relative">
+        <div className="horizon-card w-full flex items-center justify-between p-6 relative">
             <div className="flex items-center gap-4">
                 {currentFlag ? (
                     <div className="w-14 h-14 rounded-full overflow-hidden flex items-center justify-center p-0.5 bg-background-body shrink-0 shadow-sm border border-background-body">

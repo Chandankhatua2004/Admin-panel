@@ -48,7 +48,7 @@ const Header = ({ toggleSidebar }) => {
     ];
 
     return (
-        <header className="flex items-center justify-between px-4 lg:px-8 py-4 mb-4 mt-2">
+        <header className="w-full flex items-center justify-between px-4 lg:px-8 py-4 mb-4 mt-2">
             <div className="flex items-center gap-4">
                 {/* Mobile Menu Toggle */}
                 <button
@@ -70,7 +70,7 @@ const Header = ({ toggleSidebar }) => {
                     />
                 </div>
 
-                <div className="relative bg-background-body rounded-full flex items-center px-6 py-3 w-40 md:w-72 shadow-sm transition-all border border-transparent dark:border-white/5">
+                <div className="relative bg-background-body rounded-full flex items-center px-4 md:px-6 py-3 flex-1 max-w-[400px] shadow-sm transition-all border border-transparent dark:border-white/5">
                     <input
                         type="text"
                         placeholder={t.search}

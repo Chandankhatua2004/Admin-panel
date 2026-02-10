@@ -9,7 +9,7 @@ const DashRow1 = () => {
     const t = translations[language];
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             <HorizonStatCard
                 title={t.earnings}
                 value="$350.4"

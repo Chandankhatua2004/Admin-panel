@@ -18,9 +18,9 @@ const Layout = ({ children }) => {
             )}
 
             <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-            <div className="flex-1 lg:ml-72 flex flex-col min-w-0">
+            <div className="flex-1 lg:ml-72 flex flex-col min-w-0 w-full max-w-full">
                 <Header toggleSidebar={toggleSidebar} />
-                <main className="px-4 lg:px-8 pb-8 w-full max-w-full overflow-hidden">
+                <main className="px-4 lg:px-8 pb-8 w-full max-w-full overflow-hidden flex-1">
                     {children}
                 </main>
             </div>
