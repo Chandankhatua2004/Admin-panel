@@ -1,7 +1,7 @@
 import React from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { Calendar as CalendarIcon, BarChart3 } from 'lucide-react';
-import { useTheme } from '../../context/ThemeContext';
+
 
 const data = [
     { name: 'SEP', spent: 20, track: 35 },
@@ -13,8 +13,8 @@ const data = [
 ];
 
 const TotalSpentChart = () => {
-    const { theme } = useTheme();
-    const isDark = theme === 'dark';
+    const isDark = false;
+
 
     return (
         <div className="horizon-card h-full flex flex-col">

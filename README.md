@@ -7,7 +7,6 @@ A premium, highly-responsive administrative dashboard built with **React 19**, *
 - **Interactive Analytics**: Dynamic charts with entrance and interactive animations.
 - **NFT Marketplace Segment**: Trending NFTs carousel with bidding system simulation.
 - **Multilingual Support**: Built-in language switching support (English, Hindi, etc.).
-- **Theme Switching**: Seamless Light/Dark mode transitions.
 - **Modern UI Components**: Custom-built cards, tables, calendars, and checklists.
 - **Responsive Layout**: Optimized for Desktop, Tablet, and Mobile screens.
 

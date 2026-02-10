@@ -1,7 +1,7 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { BarChart3 } from 'lucide-react';
-import { useTheme } from '../../context/ThemeContext';
+
 
 const data = [
     { name: '17', a: 40, b: 30, c: 20 },
@@ -16,8 +16,8 @@ const data = [
 ];
 
 const WeeklyRevenueChart = () => {
-    const { theme } = useTheme();
-    const isDark = theme === 'dark';
+    const isDark = false;
+
 
     return (
         <div className="horizon-card h-full flex flex-col">

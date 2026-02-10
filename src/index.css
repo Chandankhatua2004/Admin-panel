@@ -11,21 +11,12 @@
     --shadow-horizon: 14px 17px 40px 4px rgba(112, 144, 174, 0.08);
 }
 
-@variant dark (&:where(.dark, .dark *));
-
 @layer base {
     :root {
         --background-body: #F4F7FE;
         --background-card: #FFFFFF;
         --nav-text: #1B254B;
         --secondary: #707EAE;
-    }
-
-    .dark {
-        --background-body: #0B1437;
-        --background-card: #111C44;
-        --nav-text: #FFFFFF;
-        --secondary: #A3AED0;
     }
 }
 

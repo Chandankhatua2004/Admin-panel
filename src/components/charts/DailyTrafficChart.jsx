@@ -1,5 +1,5 @@
 import { BarChart, Bar, ResponsiveContainer, XAxis, YAxis, Tooltip } from 'recharts';
-import { useTheme } from '../../context/ThemeContext';
+
 
 const data = [
     { name: '00', value: 300 },
@@ -12,8 +12,8 @@ const data = [
 ];
 
 const DailyTrafficChart = () => {
-    const { theme } = useTheme();
-    const isDark = theme === 'dark';
+    const isDark = false;
+
 
     return (
         <div className="horizon-card h-full flex flex-col">

@@ -1,17 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Search, Bell, User, Settings, Users, HelpCircle, LogOut, Menu, Moon, Sun } from 'lucide-react';
+import { Search, Bell, User, Settings, Users, HelpCircle, LogOut, Menu } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
-import { useTheme } from '../../context/ThemeContext';
 import translations from '../../locales/translations';
 import logo from '../../assets/dashboard-logo.png';
 
 const Header = ({ toggleSidebar }) => {
     const { language, changeLanguage } = useLanguage();
-    const { theme, toggleTheme } = useTheme();
     const t = translations[language];
 
     const [isLangOpen, setIsLangOpen] = useState(false);
     const [isProfileOpen, setIsProfileOpen] = useState(false);
+
 
     const langRef = useRef(null);
     const profileRef = useRef(null);
@@ -119,15 +118,6 @@ const Header = ({ toggleSidebar }) => {
                         <div className="absolute top-0 right-0 w-3 h-3 bg-rose-500 rounded-full border-2 border-white shadow-sm" />
                     </button>
                 </div>
-
-                {/* Theme Toggle */}
-                <button
-                    onClick={toggleTheme}
-                    className="w-10 h-10 rounded-full bg-background-body flex items-center justify-center text-primary hover:bg-[#E0E5F2] transition-colors cursor-pointer"
-                    title={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
-                >
-                    {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
-                </button>
 
                 {/* Profile Dropdown */}
                 <div className="relative" ref={profileRef}>
