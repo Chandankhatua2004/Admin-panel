@@ -17,13 +17,8 @@ const DistributionChart = () => {
                     'rgba(245, 158, 11, 0.8)',
                     'rgba(16, 185, 129, 0.8)',
                 ],
-                borderColor: [
-                    '#fff',
-                    '#fff',
-                    '#fff',
-                    '#fff',
-                ],
-                borderWidth: 2,
+                borderColor: 'transparent',
+                borderWidth: 0,
             },
         ],
     };

@@ -23,28 +23,48 @@ body {
 .recharts-cartesian-axis-line,
 .recharts-cartesian-axis-tick-line,
 .recharts-cartesian-axis,
+.recharts-xAxis,
+.recharts-yAxis,
+.recharts-default-tooltip,
+.recharts-tooltip-wrapper,
 canvas,
-svg {
+svg,
+rect,
+path {
     outline: none !important;
     border: none !important;
+    box-shadow: none !important;
     background: transparent !important;
     -webkit-tap-highlight-color: transparent;
 }
 
-/* Force hide all axis and grid lines */
-.recharts-cartesian-grid line,
-.recharts-cartesian-axis-line,
-.recharts-cartesian-axis-tick-line,
-.recharts-rectangle.recharts-tooltip-cursor {
+/* Force hide all axis and grid lines with extreme specificity */
+svg .recharts-cartesian-grid line,
+svg .recharts-cartesian-axis-line,
+svg .recharts-cartesian-axis-tick-line,
+svg .recharts-xAxis .recharts-cartesian-axis-line,
+svg .recharts-yAxis .recharts-cartesian-axis-line,
+.recharts-rectangle.recharts-tooltip-cursor,
+.recharts-curve.recharts-tooltip-cursor {
     display: none !important;
     opacity: 0 !important;
     stroke: transparent !important;
     stroke-width: 0 !important;
+    visibility: hidden !important;
 }
 
-/* Ensure no border-box or stroke causes visible lines on containers */
-.recharts-surface {
-    overflow: visible;
+/* Target and hide any residual background rectangles inside the SVG */
+.recharts-cartesian-grid-bg,
+.recharts-background-rect,
+.recharts-layer.recharts-cartesian-axis-line {
+    fill: transparent !important;
+    stroke: none !important;
+    display: none !important;
+}
+
+/* Ensure no default focus outlines on interactive chart elements */
+.recharts-wrapper *:focus {
+    outline: none !important;
 }
 
 
