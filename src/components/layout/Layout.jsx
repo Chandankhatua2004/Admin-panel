@@ -7,6 +7,17 @@ const Layout = ({ children }) => {
 
     const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
+    React.useEffect(() => {
+        if (isSidebarOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [isSidebarOpen]);
+
     return (
         <div className="flex min-h-screen bg-background-body relative">
             {/* Mobile Backdrop */}

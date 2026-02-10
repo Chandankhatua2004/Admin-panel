@@ -48,7 +48,10 @@ const HorizonStatCard = ({ title, value, icon: Icon, extra, isBalance, flag: ini
 
             {isBalance && (
                 <div
-                    onClick={() => setIsOpen(!isOpen)}
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        setIsOpen(!isOpen);
+                    }}
                     className="text-secondary opacity-40 hover:opacity-100 transition-opacity cursor-pointer p-2"
                 >
                     <ChevronDown size={20} className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
