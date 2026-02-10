@@ -58,19 +58,21 @@ const Header = ({ toggleSidebar }) => {
                     <Menu size={20} />
                 </button>
 
-                {/* Mobile/Tablet Logo */}
+                {/* Desktop/Tablet Logo */}
                 <div
                     onClick={() => window.location.reload()}
-                    className="lg:hidden flex items-center justify-center w-10 h-10 bg-background-card rounded-xl shadow-[0px_10px_20px_-5px_rgba(67,24,255,0.25)] overflow-hidden border border-background-body cursor-pointer"
+                    className="hidden lg:flex items-center justify-center w-10 h-10 bg-background-card rounded-xl shadow-[0px_10px_20px_-5px_rgba(67,24,255,0.25)] overflow-hidden border border-background-body cursor-pointer mr-2"
                 >
-                    <img
-                        src={logo}
-                        alt="Logo"
-                        className="w-full h-full object-contain p-1"
-                    />
+                    <img src={logo} alt="Logo" className="w-full h-full object-contain p-1" />
                 </div>
 
-                <div className="relative bg-background-body rounded-full flex items-center px-4 md:px-6 py-3 flex-1 max-w-[400px] shadow-sm transition-all border border-transparent dark:border-white/5">
+                {/* Mobile Search Icon Button */}
+                <button className="md:hidden w-10 h-10 rounded-full bg-background-body flex items-center justify-center text-nav-text hover:bg-gray-100 transition-colors cursor-pointer">
+                    <Search size={20} className="opacity-70" />
+                </button>
+
+                {/* Desktop Search Bar */}
+                <div className="hidden md:flex relative bg-background-body rounded-full items-center px-4 md:px-6 py-3 flex-1 max-w-[400px] shadow-sm transition-all border border-transparent dark:border-white/5">
                     <input
                         type="text"
                         placeholder={t.search}
@@ -80,7 +82,7 @@ const Header = ({ toggleSidebar }) => {
                 </div>
             </div>
 
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-2 sm:gap-5">
                 {/* Language Switcher */}
                 <div className="relative" ref={langRef}>
                     <div
