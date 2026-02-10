@@ -2,8 +2,6 @@
 
 A premium, highly-responsive administrative dashboard built with **React 19**, **Vite**, and **Tailwind CSS 4**. This dashboard features rich visualizations, interactive components, and a modern design system.
 
-![Dashboard Preview](https://cdn.pixabay.com/photo/2021/08/04/13/06/software-6521720_1280.jpg)
-
 ## ✨ Key Features
 
 - **Interactive Analytics**: Dynamic charts with entrance and interactive animations.
