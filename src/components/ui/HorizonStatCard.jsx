@@ -5,6 +5,7 @@ const HorizonStatCard = ({ title, value, icon: Icon, extra, isBalance, flag: ini
     const [isOpen, setIsOpen] = React.useState(false);
     const [currentFlag, setCurrentFlag] = React.useState(initialFlag);
     const dropdownRef = React.useRef(null);
+    const toggleRef = React.useRef(null);
 
     const countries = [
         { name: 'United States', flag: 'https://flagcdn.com/w40/us.png' },
@@ -16,7 +17,13 @@ const HorizonStatCard = ({ title, value, icon: Icon, extra, isBalance, flag: ini
 
     React.useEffect(() => {
         const handleClickOutside = (event) => {
-            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+            // If clicking outside both the dropdown AND the toggle button, close it
+            if (
+                dropdownRef.current &&
+                !dropdownRef.current.contains(event.target) &&
+                toggleRef.current &&
+                !toggleRef.current.contains(event.target)
+            ) {
                 setIsOpen(false);
             }
         };
@@ -48,10 +55,8 @@ const HorizonStatCard = ({ title, value, icon: Icon, extra, isBalance, flag: ini
 
             {isBalance && (
                 <div
-                    onClick={(e) => {
-                        e.stopPropagation();
-                        setIsOpen(!isOpen);
-                    }}
+                    ref={toggleRef}
+                    onClick={() => setIsOpen(!isOpen)}
                     className="text-secondary opacity-40 hover:opacity-100 transition-opacity cursor-pointer p-2"
                 >
                     <ChevronDown size={20} className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
