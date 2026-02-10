@@ -54,7 +54,6 @@ const TotalSpentChart = () => {
                                 <stop offset="95%" stopColor="#2BB2FE" stopOpacity={0} />
                             </linearGradient>
                         </defs>
-                        <CartesianGrid strokeDasharray="0" vertical={false} stroke="transparent" />
                         <XAxis
                             dataKey="name"
                             axisLine={false}

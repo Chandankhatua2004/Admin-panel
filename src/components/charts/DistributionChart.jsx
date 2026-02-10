@@ -55,7 +55,7 @@ const DistributionChart = () => {
     };
 
     return (
-        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm h-full flex flex-col">
+        <div className="horizon-card h-full flex flex-col">
             <h3 className="text-lg font-bold text-slate-900 mb-6 font-sans">Traffic Source Distribution</h3>
             <div className="flex-1 min-h-[300px] relative">
                 <Pie data={data} options={options} />

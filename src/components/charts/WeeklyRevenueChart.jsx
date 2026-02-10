@@ -31,7 +31,6 @@ const WeeklyRevenueChart = () => {
             <div className="flex-1 w-full min-h-[300px]">
                 <ResponsiveContainer width="100%" height="100%">
                     <BarChart data={data} mx={-10}>
-                        <CartesianGrid strokeDasharray="0" vertical={false} stroke="transparent" />
                         <XAxis
                             dataKey="name"
                             axisLine={false}

@@ -15,13 +15,36 @@ body {
     position: relative;
 }
 
-/* Remove default focus outlines from charts and SVGs */
+/* Comprehensive Chart Reset: Remove all frames, borders, and lines */
 .recharts-wrapper,
 .recharts-surface,
+.recharts-background-rect,
+.recharts-cartesian-grid,
+.recharts-cartesian-axis-line,
+.recharts-cartesian-axis-tick-line,
+.recharts-cartesian-axis,
 canvas,
 svg {
     outline: none !important;
+    border: none !important;
+    background: transparent !important;
     -webkit-tap-highlight-color: transparent;
+}
+
+/* Force hide all axis and grid lines */
+.recharts-cartesian-grid line,
+.recharts-cartesian-axis-line,
+.recharts-cartesian-axis-tick-line,
+.recharts-rectangle.recharts-tooltip-cursor {
+    display: none !important;
+    opacity: 0 !important;
+    stroke: transparent !important;
+    stroke-width: 0 !important;
+}
+
+/* Ensure no border-box or stroke causes visible lines on containers */
+.recharts-surface {
+    overflow: visible;
 }
 
 
